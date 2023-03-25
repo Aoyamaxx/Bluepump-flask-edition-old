@@ -1,7 +1,7 @@
 body {
 	background-color: white;
 	font-family: 'Poppins', sans-serif;
-    margin: 0;
+  margin: 0;
 }
 
 header {
@@ -12,9 +12,13 @@ header {
 	border-bottom: 1px solid gray;
 }
 
+.main-header {
+	display: flex;
+}
+
 .logo {
-	height: 50px;
-  margin-left: 50px;
+	height: 75px;
+  margin-left: 60px;
 }
 
 .menu-items {
@@ -25,10 +29,10 @@ header {
 .menu-item {
 	margin-right: 40px;
 	font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    color: rgba(36, 36, 36, 0.8);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgba(36, 36, 36, 0.8);
 }
 
 .menu-item.donate {
@@ -40,9 +44,9 @@ header {
 
 .menu-item:hover {
 	text-decoration: none;
-    color: rgba(3, 196, 255, 0.8);
-    transform: scale(1.2);
-    transition: transform 0.2s ease-in-out;
+  color: rgba(3, 196, 255, 0.8);
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 
 .container {
@@ -52,7 +56,7 @@ header {
   border-bottom: 1px solid gray;
 }
 
-.left, .right {
+.left-title, .right-map {
 	width: 50%;
 	display: flex;
 	justify-content: center;
@@ -66,28 +70,28 @@ header {
 .title h1 {
 	font-size: 38px;
 	font-weight: bold;
-    margin-top: -100px;
-    margin-left: 90px;
-    margin-right: 90px;
+  margin-top: -100px;
+  margin-left: 90px;
+  margin-right: 90px;
 	margin-bottom: 50px;
 }
 
 .title p {
 	font-size: 24px;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 	line-height: 1.5;
-    margin-top: 0px;
-    margin-left: 120px;
-    margin-right: 120px;
+  margin-top: 0px;
+  margin-left: 120px;
+  margin-right: 120px;
 	margin-bottom: 50px;
 }
 
-.right {
+.right-map {
 	height: 100%;
 	position: relative;
 }
 
-.right iframe {
+.right-map iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -97,7 +101,7 @@ header {
 } 
   
 h1 {
-	font-size: 48px;
+	font-size: 55px;
 	font-weight: bold;
 }
 
@@ -114,10 +118,11 @@ h1 {
 
 .partners-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
   text-align: center;
   margin-bottom: 50px;
+  margin-top: -25px;
 }
 
 .partners-list {
@@ -138,4 +143,126 @@ h1 {
 .separator {
   border-top: 1px solid gray;
   margin: 50px 0;
+}
+
+footer {
+	background-color: rgb(228, 227, 227,);
+	padding: 50px 0;
+}
+
+.footer-top {
+  padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1600px;
+	margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.footer-section-a {
+	flex: 1;
+	margin-bottom: 30px;
+  margin-left: 125px;
+}
+
+.footer-section-b {
+	flex: 1;
+	margin-bottom: 30px;
+}
+
+.footer-section-c {
+	flex: 1;
+	margin-bottom: 30px;
+}
+
+.footer-section-d {
+	flex: 1;
+	margin-bottom: 30px;
+}
+
+.footer-section-d p {
+	color: rgba(111, 108, 144);
+}
+
+.footer-item {
+  text-decoration: none;
+  color: rgba(111, 108, 144);
+}
+
+.footer-item:hover { /* Not working */
+	text-decoration: none;
+  color: rgba(72, 68, 107, 0.8);
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer-section h3 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  color: #170F49;
+}
+
+.footer-section p {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.footer-logo {
+	height: 60px;
+	margin-bottom: 20px;
+  margin-top: 14px;
+}
+
+.connect-social h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+  margin-top: 30px;
+}
+
+.social-icons a {
+	margin-right: 10px;
+}
+
+.footer-bottom {
+	max-width: 1600px;
+	margin: 20px auto 0;
+	padding-top: 20px;
+	border-top: 1px solid #D9D9D9;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.left-container {
+  width: 250px;
+}
+
+.left-fairwater {
+  margin: 0;
+}
+
+.right-container {
+  flex: 1;
+}
+
+.right-rights {
+  margin: 0;
+  text-align: right;
+}
+
+.footer-bottom p {
+	font-size: 14px;
+	margin-bottom: 5px;
+  margin-left: 100px;
+  margin-right: 0px;
+  margin: 5px 0;
 }
