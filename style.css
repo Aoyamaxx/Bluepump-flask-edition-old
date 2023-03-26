@@ -400,8 +400,8 @@ a.footer-logo {
 	display: flex;
 	flex-direction: row;
 	height: 70vh;
-  	border-bottom: 1px solid gray;
-	margin-top: -50px;
+	border-bottom: 1px solid gray;
+	margin-top: 0px;
 }
 
 .left-mission, .right-mission {
@@ -439,61 +439,8 @@ a.footer-logo {
 	position: relative;
 }
 
-
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  max-width: 100vw;
-}
-
-.container-landing,
-.container-project,
-.container-mission {
-  flex-wrap: wrap;
-}
-
-.left-title,
-.right-map,
-.left-project,
-.right-project,
-.left-mission,
-.right-mission {
-  width: 100%;
-  padding: 20px;
-}
-
-.separator {
-  margin: 30px 0;
-}
-
-@media (min-width: 768px) {
-  .container-landing,
-  .container-project,
-  .container-mission {
-    flex-wrap: nowrap;
-  }
-
-  .left-title,
-  .right-map,
-  .left-project,
-  .right-project,
-  .left-mission,
-  .right-mission {
-    width: 50%;
-    padding: 20px;
-  }
-
-  .separator {
-    margin: 50px 0;
-  }
+.left-project-pic, .right-mission-pic {
+	max-height: 70vh;
+  	width: 100%;
+  	object-fit: cover;
 }
