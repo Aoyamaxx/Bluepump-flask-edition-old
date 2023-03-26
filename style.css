@@ -446,8 +446,32 @@ a.footer-logo {
 
 @media screen and (max-width: 600px) {
 	.main-header {
-	  transform: scale(0.52);
-	  margin-left: -195px;
-	  border-bottom: none;
+		transform: scale(0.65);
+    	margin-left: -170px;
+	  	border-bottom: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.main-header {
+		transform: scale(0.55);
+    	margin-left: -170px;
+	  	border-bottom: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.main-header {
+		transform: scale(0.42);
+    	margin-left: -170px;
+	  	border-bottom: none;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.main-header {
+		transform: scale(0.32);
+    	margin-left: -170px;
+	  	border-bottom: none;
 	}
 }
