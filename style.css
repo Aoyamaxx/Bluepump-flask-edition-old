@@ -1,7 +1,7 @@
 body {
 	background-color: white;
 	font-family: 'Poppins', sans-serif;
-  margin: 0;
+  	margin: 0;
 }
 
 header {
@@ -10,7 +10,6 @@ header {
 	align-items: center;
 	padding: 10px;
 	border-bottom: 1px solid gray;
-	transition: transform 0.3s ease-in-out;
 }
 
 .main-header {
@@ -19,7 +18,7 @@ header {
 
 .logo {
 	height: 75px;
-  margin-left: 60px;
+  	margin-left: 60px;
 }
 
 .menu-items {
@@ -30,10 +29,10 @@ header {
 .menu-item {
 	margin-right: 40px;
 	font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  color: rgba(36, 36, 36, 0.8);
+  	font-family: 'Poppins', sans-serif;
+  	font-weight: bold;
+  	text-decoration: none;
+  	color: rgba(36, 36, 36, 0.8);
 }
 
 .menu-item.donate {
@@ -45,16 +44,16 @@ header {
 
 .menu-item:hover {
 	text-decoration: none;
-  color: rgba(3, 196, 255, 0.8);
-  transform: scale(1.2);
-  transition: transform 0.2s ease-in-out;
+  	color: rgba(3, 196, 255, 0.8);
+  	transform: scale(1.2);
+  	transition: transform 0.2s ease-in-out;
 }
 
 .container-landing {
 	display: flex;
 	flex-direction: row;
 	height: 101vh;
-  border-bottom: 1px solid gray;
+  	border-bottom: 1px solid gray;
 }
 
 .left-title, .right-map {
@@ -71,19 +70,19 @@ header {
 .title-landing h1 {
 	font-size: 38px;
 	font-weight: bold;
-  margin-top: -100px;
-  margin-left: 90px;
-  margin-right: 90px;
+  	margin-top: -100px;
+  	margin-left: 90px;
+  	margin-right: 90px;
 	margin-bottom: 50px;
 }
 
 .title-landing p {
 	font-size: 24px;
-  font-family: 'Poppins', sans-serif;
+  	font-family: 'Poppins', sans-serif;
 	line-height: 1.5;
-  margin-top: 0px;
-  margin-left: 120px;
-  margin-right: 120px;
+  	margin-top: 0px;
+  	margin-left: 120px;
+  	margin-right: 120px;
 	margin-bottom: 50px;
 }
 
@@ -443,4 +442,12 @@ a.footer-logo {
 	max-height: 70vh;
   	width: 100%;
   	object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+	.main-header {
+	  transform: scale(0.52);
+	  margin-left: -195px;
+	  border-bottom: none;
+	}
 }
