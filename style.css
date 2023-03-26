@@ -248,7 +248,7 @@ a.footer-logo {
 }
 
 .left-container {
-  width: 250px;
+	flex: 1;
 }
 
 .left-fairwater {
@@ -257,6 +257,12 @@ a.footer-logo {
 
 .right-container {
   flex: 1;
+}
+
+.terms-and-conditions, .privacy {
+  	color: rgb(57, 53, 97);
+  	transform: scale(1.2);
+  	transition: transform 0.2s ease-in-out;
 }
 
 .right-rights {
@@ -323,7 +329,7 @@ a.footer-logo {
 	transition: background-color 0.3s ease-in-out;
 }
   
-  .learn-more-btn:hover {
+.learn-more-btn:hover {
 	background-color: #1c6bc0;
 }
   
