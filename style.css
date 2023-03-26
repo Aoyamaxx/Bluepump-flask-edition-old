@@ -211,9 +211,21 @@ footer {
 }
 
 .footer-logo {
+	display: block;
 	height: 60px;
 	margin-bottom: 20px;
-  margin-top: 14px;
+	margin-top: 14px;
+}
+  
+.footer-logo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+  
+a.footer-logo {
+	position: relative;
+	z-index: 1;
 }
 
 .connect-social h3 {
