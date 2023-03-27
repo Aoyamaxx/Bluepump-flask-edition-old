@@ -131,6 +131,7 @@ header {
 	  justify-content: center;
 	  padding-top: 20px;
 	  margin-right: 0px;
+	  padding-bottom: 20px;
 	}
 
 	.menu-item:not(.donate) {
@@ -144,12 +145,12 @@ header {
 	}
   
 	.logo {
-	  max-height: 50px;
+	  	max-height: 50px;
 	}
   
 	.donate-wrapper {
-	  margin-left: 0;
-	  margin-right: 0;
+	  	margin-left: 0;
+	  	margin-right: 0;
 	}
 }
 
