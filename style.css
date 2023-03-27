@@ -52,6 +52,7 @@ header {
 .logo {
 	max-height: 70px;
 	justify-content: flex-start;
+	margin-left: 50px;
 }
   
 .menu-items {
@@ -146,6 +147,7 @@ header {
   
 	.logo {
 	  	max-height: 50px;
+		margin-left: 0px;
 	}
   
 	.donate-wrapper {
