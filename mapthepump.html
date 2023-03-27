@@ -38,19 +38,8 @@
             }
     
             #map {
-                position: relative;
-                flex-grow: 1;
+	            height: 100%;
                 width: 100%;
-            }
-
-            #wrapper {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
-
-            #main-content {
-                flex-grow: 1;
             }
 
             #footer {
@@ -73,7 +62,6 @@
                     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
                 }
             </style>
-            <div id="wrapper">
                 <div id="header"></div>
                 <div class="map-container">
                     <div id="map"></div>
@@ -395,7 +383,6 @@
                     });
                 </script>
                 <div id="footer"></div>
-            </div>
         <script src="loadHeaderFooter.js"></script>
     </body>
 </html>

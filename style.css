@@ -9,11 +9,37 @@ body {
 header {
 	border-bottom: 1px solid gray;
 }
+
+.collapse {
+	text-align: center;
+}
+
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.navbar-nav {
+	justify-content: center;
+	margin-left: auto;
+}
   
+.logo-button-container {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-toggler {
+	margin-left: auto;
+}
+
 .container-header {
 	display: flex;
 	align-items: center;
 	flex-grow: 1;
+	justify-content: center;
 }
 
 .navbar {
@@ -24,34 +50,31 @@ header {
 }
   
 .logo {
-	max-height: 75px;
-	max-height: 100x;
-	margin: 0;
+	max-height: 70px;
+	justify-content: flex-start;
 }
   
 .menu-items {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
 	margin-left: auto;
+	margin-right: 40px;
 }
   
 .menu-item:not(.donate) {
-	margin-right: 40px;
 	font-size: 18px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: bold;
 	text-decoration: none;
 	color: rgba(36, 36, 36, 0.8);
+	margin-right: 40px !important;
 }
 
 .donate-wrapper {
-    display: inline-block;
+    display: inline-flex;
     background-color: rgb(0, 0, 0);
     border-radius: 50px;
     padding: 3px 10px;
-    margin-right: 40px;
-	margin-left: auto;
 	transition: transform 0.2s ease-in-out;
 }
 
@@ -81,21 +104,52 @@ header {
 	transition: transform 0.2s ease-in-out;
 }
   
-@media (max-width: 991.98px) {
-	.menu-item {
-	  margin-right: 10px;
+@media (max-width: 767.98px) {
+	.navbar-container {
+	  flex-wrap: wrap;
+	  justify-content: space-between;
 	}
-	
+  
+	.navbar-toggler {
+	  order: 2;
+	  position: absolute;
+	  right: 15px;
+	}
+  
 	.container-header {
-		flex-direction: column;
+	  width: 100%;
 	}
-	
+  
+	.collapse {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
 	.menu-items {
-		width: 100%;
+	  width: 100%;
+	  justify-content: center;
+	  padding-top: 20px;
+	  margin-right: 0px;
 	}
 
+	.menu-item:not(.donate) {
+		font-size: 18px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		color: rgba(36, 36, 36, 0.8);
+		margin-right: 40px;
+		margin-right: 0px !important;
+	}
+  
 	.logo {
-		max-height: 75px;
+	  max-height: 50px;
+	}
+  
+	.donate-wrapper {
+	  margin-left: 0;
+	  margin-right: 0;
 	}
 }
 
@@ -507,3 +561,4 @@ h1 {
   	width: 100%;
   	object-fit: cover;
 }
+
