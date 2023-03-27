@@ -10,15 +10,6 @@ li a {display: block;
     text-decoration: none;}
 li a:hover {background-color: #111; opacity: 50%;}
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: hsl(216, 10%, 19%);
-    overflow: hidden;
-    width: 100%;
-}
 .socials {float:right;
     width:auto;
     border:none;
@@ -41,11 +32,12 @@ li a:hover {background-color: #111; opacity: 50%;}
 
 .map-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: calc(100% - 100px); /* Adjust height to account for the desired 100px offset from the top */
   }
   
 #map {
+    display: flex;
     position: relative;
     flex-grow: 1;
     width: 100%;
@@ -57,3 +49,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+@media (max-width: 900px) {
+    .map-container {
+      margin-top: 8%; /* Adjust the height based on the folded header height */
+    }
+  }
