@@ -3,11 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Map the Pumps</title>
-        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="stylethemap.css">
-        <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -22,9 +19,6 @@
             body {
                 margin: 0;
                 padding: 0;
-                font-family: 'Barlow';
-                font-size: 22px;
-                font-weight: 200;
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh; /* Set the minimum height of the body to the full viewport height */
@@ -56,17 +50,12 @@
             }
         </style>
     </head>
-            <style>
-                .mapboxgl-popup {
-                    max-width: 400px;
-                    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-                }
-            </style>
-                <div id="header"></div>
-                <div class="map-container">
+    <body>
+        <div id="header"></div>
+            <div class="map-container">
                     <div id="map"></div>
-                </div>
-                <script>
+        </div>
+        <script>
                     mapboxgl.accessToken = 'pk.eyJ1Ijoic2ViYXN0aWFuZ3JhZWZmIiwiYSI6ImNsMGR0NGw3cTAzMDAzZGxwZGl5bnR5Z2UifQ.U-eNkITMkqBtWTB532MbBA';
                     const map = new mapboxgl.Map({
                         container: 'map',
@@ -381,8 +370,8 @@
                             map.getCanvas().style.cursor = '';
                         });
                     });
-                </script>
-                <div id="footer"></div>
+        </script>
+        <div id="footer"></div>
         <script src="loadHeaderFooter.js"></script>
     </body>
 </html>
