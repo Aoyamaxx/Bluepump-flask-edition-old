@@ -16,20 +16,24 @@
 
         <style>
             body {
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh; /* Set the minimum height of the body to the full viewport height */
-            }
+				margin: 0;
+				padding: 0;
+				display: grid;
+				grid-template-rows: auto 1fr; /* Set the body grid layout to have two rows, one for the header and one for the content */
+				min-height: 100vh;
+			}
     
             #header {
-                position: relative;
-                height: 100px;
-                background-color: #ffffff;
-                width: 100%;
-            }
+				position: relative;
+				height: auto; /* Change height to auto */
+				background-color: #ffffff;
+				width: 100%;
+			}
     
+			#content {
+				flex: 1; /* This will make the content div take up the remaining vertical space */
+			}
+
             #map {
 	            height: 100%;
                 width: 100%;
@@ -49,11 +53,11 @@
             }
 
             .map-container {
-                display: flex;
-                flex-direction: row;
-                height: 100vh; /* Adjust height to account for the desired 100px offset from the top */
-              }
-            
+				grid-row: 2; /* Set the map container to be in the second row of the grid */
+				height: 100%;
+				width: 100%;
+			}
+			
             html, body {
                 height: 100%;
                 margin: 0;
@@ -63,9 +67,11 @@
     </head>
     <body>
         <div id="header"></div>
-        <div class="map-container">
-            <div id="map"></div>
-        </div>
+		<div id="content">
+        	<div class="map-container">
+            	<div id="map"></div>
+        	</div>
+		</div>
         <script>
                     mapboxgl.accessToken = 'pk.eyJ1Ijoic2ViYXN0aWFuZ3JhZWZmIiwiYSI6ImNsMGR0NGw3cTAzMDAzZGxwZGl5bnR5Z2UifQ.U-eNkITMkqBtWTB532MbBA';
                     const map = new mapboxgl.Map({
