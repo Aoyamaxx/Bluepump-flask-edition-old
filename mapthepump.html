@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title>Map the Pumps</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="stylethemap.css">
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -37,7 +36,7 @@
             }
 
             #footer {
-                height: 0px; /* Adjust this value based on your desired footer height */
+                height: 0px;
                 background-color: #ffffff;
                 width: 100%;
                 bottom: 0;
@@ -48,12 +47,24 @@
                 max-width: 400px;
                 font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
             }
+
+            .map-container {
+                display: flex;
+                flex-direction: row;
+                height: 100vh; /* Adjust height to account for the desired 100px offset from the top */
+              }
+            
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
         </style>
     </head>
     <body>
         <div id="header"></div>
-            <div class="map-container">
-                    <div id="map"></div>
+        <div class="map-container">
+            <div id="map"></div>
         </div>
         <script>
                     mapboxgl.accessToken = 'pk.eyJ1Ijoic2ViYXN0aWFuZ3JhZWZmIiwiYSI6ImNsMGR0NGw3cTAzMDAzZGxwZGl5bnR5Z2UifQ.U-eNkITMkqBtWTB532MbBA';
