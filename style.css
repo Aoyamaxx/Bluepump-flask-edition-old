@@ -156,6 +156,31 @@ header {
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+	.logo {
+	  max-height: 45px;
+	  margin-left: 30px;
+	}
+  
+	.menu-items {
+	  margin-right: 20px;
+	}
+  
+	.menu-item:not(.donate) {
+	  font-size: 16px;
+	  margin-right: 30px !important;
+	}
+  
+	.donate-wrapper {
+	  padding: 3px 8px;
+	}
+  
+	.menu-item.donate {
+	  padding: 8px 25px;
+	  font-size: 16px;
+	}
+}
+
 /* Footer */
 
 footer {
@@ -353,45 +378,71 @@ h1 {
 	font-weight: bold;
 }
 
+/* Partner section */
+
 .partners-section {
-  background-color: rgba(228, 227, 227, 0.3);
-  border-radius: 50px;
-  padding: 50px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(228, 227, 227, 0.8);
+	border-radius: 50px;
+	padding: 50px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .partners-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 50px;
+  }
+  
+  .partners-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .partner-logo {
+	max-height: 80px;
+	margin: 0 30px 30px 0;
+  }
+  
+  .separator {
+	border-top: 1px solid gray;
+	margin: 50px 0;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+	.partner-logo {
+	  max-height: 60px;
+	  margin: 0 20px 20px 0;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.partners-title {
+	  font-size: 20px;
+	}
+  
+	.partner-logo {
+	  max-height: 40px;
+	  margin: 0 10px 10px 0;
+	}
+  }
+  
 
-.partners-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 50px;
-  margin-top: -25px;
-}
-
-.partners-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.partner-logo {
-  max-height: 80px;
-  margin: 0 30px 30px 0;
-}
-
-.separator {
-  border-top: 1px solid gray;
-  margin: 50px 0;
-}
+/* BluePump gallery */
 
 .bluepump-gallery {
 	text-align: center;
@@ -473,6 +524,8 @@ h1 {
 	outline: none;
 }
 
+/* Our projects homepage */
+
 .container-project {
 	display: flex;
 	flex-direction: row;
@@ -515,6 +568,8 @@ h1 {
 	height: 100%;
 	position: relative;
 }
+
+/* Our mission homepage */
 
 .container-mission {
 	display: flex;
