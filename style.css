@@ -89,7 +89,6 @@ header {
 .menu-item.donate {
 	padding: 10px 30px;
 	font-size: 18px;
-	font-family: 'Poppins', sans-serif;
 	font-weight: bold;
 	text-decoration: none;
 	color: rgb(255, 255, 255) !important;
@@ -97,12 +96,12 @@ header {
 
 .menu-item.donate:hover {
 	text-decoration: none;
-	color: rgba(3, 196, 255, 0.8) !important;
+	color: rgba(0, 124, 175, 1) !important;
 }
 
 .menu-item:hover:not(.donate) {
 	text-decoration: none;
-	color: rgba(3, 196, 255, 0.8) !important;
+	color: rgba(0, 124, 175, 1) !important;
 	transform: scale(1.2);
 	transition: transform 0.2s ease-in-out;
 }
@@ -186,11 +185,12 @@ header {
 /* Footer */
 
 footer {
-	background-color: rgb(228, 227, 227,);
+	background-color: rgb(255, 255, 255) !important;
 	padding: 50px 0;
 }
 
 .footer-top {
+	background-color: rgb(255, 255, 255) !important;
   	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
@@ -281,6 +281,7 @@ a.footer-logo {
 }
 
 .footer-bottom {
+	background-color: rgb(255, 255, 255) !important;
 	max-width: 1600px;
 	margin: 20px auto 0;
 	padding-top: 20px;
@@ -325,59 +326,125 @@ a.footer-logo {
 /* First landing title and picture*/
 
 .container-landing {
-	display: flex;
-	flex-direction: row;
-	height: 101vh;
-  	border-bottom: 1px solid gray;
-}
-
-.left-title, .right-map {
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position: relative;
+  height: 60vh;
+  border-bottom: 1px solid gray;
+  overflow: hidden;
 }
 
 .title-landing {
-	text-align: center;
+  position: absolute;
+  height: 60vh;
+  width: 120vh;
+  z-index: 10;
+  padding: 2rem;
+  color: white;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .title-landing h1 {
-	font-size: 38px;
-	font-weight: bold;
-  	margin-top: -100px;
-  	margin-left: 90px;
-  	margin-right: 90px;
-	margin-bottom: 50px;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  padding-left: 5vh;
+  padding-top: 15vh;
+}
+
+.bluepump-title {
+	color: rgba(0, 124, 175, 1);
 }
 
 .title-landing p {
-	font-size: 24px;
-  	font-family: 'Poppins', sans-serif;
-	line-height: 1.5;
-  	margin-top: 0px;
-  	margin-left: 120px;
-  	margin-right: 120px;
-	margin-bottom: 50px;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding-left: 5vh;
 }
 
-.right-map {
-	height: 100%;
-	position: relative;
+.video-background, .image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.right-map iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	border: none;
-} 
-  
-h1 {
-	font-size: 55px;
+.image-background {
+  display: none;
+}
+
+.donate-landing-wrapper {
+    display: inline-flex;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 3px 10px;
+	transition: transform 0.2s ease-in-out;
+	margin-left: 5vh;
+}
+
+.donate-landing-wrapper:hover {
+	transform: scale(1.2);
+	transition: transform 0.2s ease-in-out;
+}
+
+.donate-landing {
+	padding: 10px 5px;
+	font-size: 22px;
 	font-weight: bold;
+	text-decoration: none;
+	color: rgb(0, 0, 0) !important;
+}
+
+.donate-landing:hover {
+	text-decoration: none;
+	color: rgba(0, 124, 175, 1) !important;
+}
+
+@media (max-width: 767.98px) {
+  .title-landing {
+    position: relative;
+    height: 92vh;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+    padding: 2rem 1rem;
+    z-index: 20;
+  	}
+
+  .title-landing h1 {
+    font-size: 10vw;
+    margin-bottom: 20px;
+	padding-top: 35vh;
+  	}
+
+  .title-landing p {
+    font-size: 5vw;
+    margin-bottom: 20px;
+	margin-top: 3vh;
+  	}
+
+  .video-background {
+    display: none;
+  	}
+
+  .image-background {
+    display: block;
+    height: auto;
+  	}
+
+  .image-homepage-cover {
+	height: auto;
+  	}
+
+  .container-landing {
+    height: auto;
+  	}
+
+  .donate-landing-wrapper {
+	margin-top: 3vh;
+	}
 }
 
 /* Partner section */
@@ -387,13 +454,9 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	background-color: rgba(228, 227, 227, 0.8);
-	border-radius: 50px;
-	padding: 50px;
-	margin-top: 100px;
-	margin-bottom: 100px;
-	max-width: 1600px;
-	margin-left: auto;
-	margin-right: auto;
+	max-height: 40vh;
+	padding: 11.5vh;
+	border-bottom: 1px solid gray;
   }
   
   .partners-title {
@@ -418,6 +481,8 @@ h1 {
 	max-height: 80px;
 	margin: 0 30px 30px 0;
   }
+
+  /* Separator */
   
   .separator {
 	border-top: 1px solid gray;
@@ -499,31 +564,6 @@ h1 {
   
 .learn-more-btn:hover {
 	background-color: #1c6bc0;
-}
-  
-.arrow {
-	background: none;
-	border: none;
-	font-size: 40px;
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 10;
-	color: #1e90ff;
-	user-select: none;
-}
-  
-.arrow-left {
-	left: 10px;
-}
-  
-.arrow-right {
-	right: 10px;
-}
-  
-.arrow:focus {
-	outline: none;
 }
 
 /* Our projects homepage */
@@ -626,7 +666,7 @@ h1 {
 
 .projects{
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
 	padding-bottom: 50px;
@@ -644,7 +684,7 @@ h1 {
     width: 100%;
     text-align: left;
     color: rgb(0, 0, 0);
-    background-color: #ffffff;
+    background-color: #2d2d2d;
     display: flex;
     flex-direction: column;
     padding-left: 10%;
@@ -657,6 +697,7 @@ h1 {
 
 .project-header p {
     max-width: 80%;
+	color: #ffffff;
 	align-content: flex-start;
 	font-size: 22px;
 	font-weight: 400;
@@ -665,6 +706,7 @@ h1 {
 
 .project-header h1 {
     max-width: 80%;
+	color: #ffffff;
 	align-content: flex-start;
 	padding-top: 5%;
 	font-weight: bold;
