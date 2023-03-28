@@ -1,6 +1,8 @@
 body {
 	background-color: white;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Barlow';
+	font-size: 22px;
+	font-weight: 200;
   	margin: 0;
 }
 
@@ -655,12 +657,13 @@ h1 {
 
 .project-header p {
     max-width: 60%;
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 .project-header h1 {
     max-width: 60%;
 	padding-top: 5%;
+	font-weight: bold;
 }
 
 .project-row {
@@ -712,11 +715,13 @@ h1 {
     color: white;
     padding-left: 10%;
     padding-top: 5%;
+	font-weight: bold;
 }
 
 .project-column p {
     color: white;
     padding-left: 10%;
+	padding-top: 30px;
 	padding-bottom: 10%;
 }
 
@@ -733,11 +738,7 @@ h1 {
 	.project-header {
 		height: 100%;
 		width: 100%;
-		text-align: match-parent;
-		color: white;
-		background-color: #2d2d2d;
-		display: flex;
-		flex-direction: column;
+		padding-top: 5%;
 		padding-left: 10%;
 		padding-right: 10%;
 		padding-bottom: 5%;
@@ -749,6 +750,10 @@ h1 {
 	
 	.project-header h1 {
 		max-width: 100%;
+	}
+
+	.project-column h2 {
+		padding-top: 10%;
 	}
 
 	.project-card {
