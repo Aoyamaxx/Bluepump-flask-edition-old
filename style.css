@@ -63,12 +63,12 @@ header {
 	align-items: center;
 	margin-left: auto;
 	margin-right: 40px;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
 }
   
 .menu-item:not(.donate) {
-	font-size: 18px;
-	font-weight: bold;
-	text-decoration: none;
 	color: rgb(0, 0, 0, 1) !important;
 	margin-right: 40px !important;
 }
@@ -88,7 +88,7 @@ header {
 
 .menu-item.donate {
 	padding: 10px 30px;
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: bold;
 	text-decoration: none;
 	color: rgb(255, 255, 255) !important;
@@ -323,12 +323,91 @@ a.footer-logo {
   margin: 5px 0;
 }
 
+/* Mobile devices */
+@media (max-width: 767px) {
+	.footer-top {
+	  flex-direction: column;
+	}
+	
+	.footer-section {
+	  flex: 1 1 100%;
+	  margin-bottom: 30px;
+	  text-align: center;
+	}
+	
+	.footer-section-x {
+	  display: none;
+	}
+	
+	.social-icons {
+	  justify-content: center;
+	}
+  
+	.footer-bottom {
+	  flex-direction: column;
+	  text-align: center;
+	}
+	
+	.left-container, .right-container {
+	  flex: 1 1 100%;
+	}
+  
+	.right-rights {
+	  text-align: center;
+	  margin-top: 10px;
+	}
+  
+	.footer-bottom p {
+	  margin-left: 0;
+	  margin-right: 0;
+	}
+  }
+  
+  /* Tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-top {
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1 1 calc(50% - 20px); /* Subtract 20px to account for padding and margins */
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .footer-section-x {
+    display: none;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-container, .right-container {
+    flex: 1 1 100%;
+  }
+
+  .right-rights {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-bottom p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* First landing title and picture*/
 
 .container-landing {
   position: relative;
   height: 60vh;
-  border-bottom: 1px solid gray;
   overflow: hidden;
 }
 
@@ -347,7 +426,7 @@ a.footer-logo {
   font-weight: bold;
   margin-bottom: 50px;
   padding-left: 5vh;
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 .bluepump-title {
@@ -453,17 +532,17 @@ a.footer-logo {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: rgba(228, 227, 227, 0.8);
-	max-height: 40vh;
-	padding: 11.5vh;
-	border-bottom: 1px solid gray;
+	background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+	max-height: 100vh;
+	padding: 4vh;
   }
   
   .partners-title {
-	font-family: 'Poppins', sans-serif;
-	font-size: 24px;
-	font-weight: 500;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: bold;
 	text-align: center;
+	margin-top: -2vh;
 	margin-bottom: 50px;
   }
   
@@ -472,7 +551,7 @@ a.footer-logo {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	max-width: 700px;
+	max-width: auto;
 	margin-left: auto;
 	margin-right: auto;
   }
@@ -487,6 +566,11 @@ a.footer-logo {
   .separator {
 	border-top: 1px solid gray;
 	margin: 50px 0;
+  }
+
+  .separator-home {
+	border-top: 1px solid gray;
+	margin-top: 200px;
   }
   
   /* Media queries for responsive design */
@@ -512,154 +596,380 @@ a.footer-logo {
 /* BluePump gallery */
 
 .bluepump-gallery {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	text-align: center;
-	margin-bottom: 50px;
+	background: rgba(45, 45, 45, 1);
+	padding-top: 12vh;
+	padding-bottom: 16vh;
 }
   
 .gallery-title {
-	font-size: 24px;
-	font-weight: 500;
-	margin-bottom: 50px;
-	margin-top: 10px;
-}
-  
-.image-slider {
-	overflow: hidden;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	position: relative;
-  }
-  
-.slider-track {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
+	color: #ffffff;
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 3vh;
+	margin-top: 3vh;
 }
 
-  
-.gallery-image {
-	max-height: 500px;
-	margin: 0 10px;
-}
-  
 .gallery-info {
-	margin-top: 20px;
+	margin-top: 5vh;
 }
-  
+
 .gallery-introduction {
+	color: #ffffff;
 	font-size: 18px;
 }
   
 .learn-more-btn {
 	display: inline-block;
-	background-color: #1e90ff;
+	background-color: #007caf;
 	color: white;
 	font-size: 18px;
 	font-weight: bold;
 	padding: 10px 20px;
 	border-radius: 50px;
-	text-decoration: none;
-	transition: background-color 0.3s ease-in-out;
+	text-decoration: none !important;
+	margin-top: 3vh;
 }
   
 .learn-more-btn:hover {
-	background-color: #1c6bc0;
+	color: #000000;
+	transition: color 0.3s ease-in-out;
 }
 
-/* Our projects homepage */
+.image-wrapper {
+    position: relative;
+    height: 100%;
+}
 
+.gallery {
+	margin: auto;
+	border: 1px solid #ffffff;
+	height: 40vh;
+	width: 60vh;
+	margin-left: 1.8%;
+	margin-top: 3vh;
+	float: left;
+	overflow: hidden
+}
+  
+.gallery:hover {
+	border: 1px solid #ffffff;
+}
+
+.gallery img {
+	width: 100%;
+	height: 100%;
+}
+  
+.description-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 2047px) {
+	.gallery {
+		margin: auto;
+		border: 1px solid #ffffff;
+		float: none;
+		height: 30vh;
+		width: 40vh;
+		margin-top: 3vh;
+	}
+
+	.description-image {
+		color: #ffffff;
+		padding: 20px;
+		text-align: center;
+		margin-top: -2vh;
+	}
+
+	.gallery-title {
+		color: #ffffff;
+		font-size: 28px;
+		font-weight: bold;
+		margin-bottom: 3vh;
+		margin-top: 3vh;
+	}
+}
+
+@media (min-width: 1920) and (max-width: 1920px) {
+    .gallery {
+        margin-left: 2.2%;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) {
+    .gallery {
+        margin-left: 8%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .gallery {
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 912px) {
+    .gallery {
+        margin-left: 20%;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 820px) {
+    .gallery {
+        margin-left: 21%;
+    }
+}
+
+@media (max-width: 768px) {
+	.gallery {
+		margin: auto;
+		border: 1px solid #ffffff;
+		float: none;
+		height: 30vh;
+		width: 40vh;
+		margin-top: 3vh;
+	}
+
+	.description-image {
+		color: #ffffff;
+		padding: 20px;
+		text-align: center;
+		margin-top: -2vh;
+	}
+
+	.gallery-title {
+		color: #ffffff;
+		font-size: 28px;
+		font-weight: bold;
+		margin-bottom: 3vh;
+		margin-top: 3vh;
+	}
+}
+
+
+/* Our projects homepage */ /* Our mission homepage */
 .container-project {
-	display: flex;
-	flex-direction: row;
-	height: 70vh;
-  	border-bottom: 1px solid gray;
-	margin-top: -50px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+	border-top: 1px solid gray;
 }
 
-.left-project, .right-project {
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.left-project,
+.right-project {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.title-project {
-	text-align: center;
+.title-project,
+.title-mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px; /* Add padding to the left and right of the text */
+    max-width: 800px; /* Limit the width of the text content */
+    margin: 0 auto; /* Center the container horizontally */
+    position: absolute; /* Set the position to absolute */
+    top: 50%; /* Position at 50% from the top */
+    left: 50%; /* Position at 50% from the left */
+    transform: translate(-50%, -50%); /* Translate back by 50% to center */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
 }
 
-.title-project h1 {
-	font-size: 38px;
-	font-weight: bold;
-  	margin-top: -100px;
-  	margin-left: 90px;
-  	margin-right: 90px;
-	margin-bottom: 150px;
+.title-project h1,
+.title-mission h1 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-.title-project p {
-	font-size: 24px;
-  	font-family: 'Poppins', sans-serif;
-	line-height: 1.5;
-  	margin-top: 0px;
-  	margin-left: 120px;
-  	margin-right: 120px;
-	margin-bottom: 400px;
+.title-project p,
+.title-mission p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+	max-width: 50vw; /* Limit the width of the paragraph */
 }
 
 .right-project {
-	height: 100%;
-	position: relative;
+    height: 100%;
+    position: relative;
+	margin-top: 18%;
 }
-
-/* Our mission homepage */
 
 .container-mission {
-	display: flex;
-	flex-direction: row;
-	height: 70vh;
-	border-bottom: 1px solid gray;
-	margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
 }
 
-.left-mission, .right-mission {
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.title-mission {
-	text-align: center;
-}
-
-.title-mission h1 {
-	font-size: 38px;
-	font-weight: bold;
-  	margin-top: -100px;
-  	margin-left: 90px;
-  	margin-right: 90px;
-	margin-bottom: 150px;
-}
-
-.title-mission p {
-	font-size: 24px;
-  	font-family: 'Poppins', sans-serif;
-	line-height: 1.5;
-  	margin-top: 0px;
-  	margin-left: 120px;
-  	margin-right: 120px;
-	margin-bottom: 250px;
+.left-mission,
+.right-mission {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right-mission {
-	height: 100%;
-	position: relative;
+    height: 100%;
+    position: relative;
 }
 
-.left-project-pic, .right-mission-pic {
-	max-height: 70vh;
-  	width: 100%;
-  	object-fit: cover;
+.left-project-pic,
+.right-mission-pic {
+    max-height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.learn-more-btn-project-missions {
+	display: inline-block;
+	background-color: #007caf;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 50px;
+	text-decoration: none !important;
+	margin-top: 3vh;
+	white-space: nowrap; /* Prevent the button from wrapping */
+}
+  
+.learn-more-btn-project-missions:hover {
+	color: #000000;
+	transition: color 0.3s ease-in-out;
+}
+
+.left-project,
+.right-project,
+.left-mission,
+.right-mission {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container-project,
+    .container-mission {
+        flex-direction: column;
+    }
+
+    .left-project,
+    .right-project,
+    .left-mission,
+    .right-mission {
+        width: 100%;
+        height: auto; /* Set height to auto for mobile view */
+    }
+
+    .container-project .right-project,
+    .container-mission .left-mission {
+        order: +1;
+    }
+
+    .title-project,
+    .title-mission {
+        padding: 20px;
+        position: static; /* Set the position to static for mobile view */
+        transform: none; /* Remove the transform for mobile view */
+        top: auto; /* Remove the top position for mobile view */
+        left: auto; /* Remove the left position for mobile view */
+        max-width: 95%; /* Set max-width to 95% for mobile view */
+    }
+
+    .title-project h1,
+    .title-mission h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .title-project p,
+    .title-mission p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .left-project-pic,
+    .right-mission-pic {
+        max-height: 50vh;
+    }
+
+    .right-project {
+        margin-top: 0; /* Reset margin-top for mobile view */
+    }
+}
+
+@media (max-width: 1800px) or (max-height: 927px){
+    .container-project,
+    .container-mission {
+        flex-direction: column;
+    }
+
+    .left-project,
+    .right-project,
+    .left-mission,
+    .right-mission {
+        width: 100%;
+        height: auto; /* Set height to auto for mobile view */
+    }
+
+    .container-project .right-project,
+    .container-mission .left-mission {
+        order: +1;
+    }
+
+    .title-project,
+    .title-mission {
+        padding: 20px;
+        position: static; /* Set the position to static for mobile view */
+        transform: none; /* Remove the transform for mobile view */
+        top: auto; /* Remove the top position for mobile view */
+        left: auto; /* Remove the left position for mobile view */
+        max-width: 95%; /* Set max-width to 95% for mobile view */
+    }
+
+    .title-project h1,
+    .title-mission h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .title-project p,
+    .title-mission p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .left-project-pic,
+    .right-mission-pic {
+        max-height: 50vh;
+    }
+
+    .right-project {
+        margin-top: 0; /* Reset margin-top for mobile view */
+    }
 }
 
 /* Project page */
@@ -692,7 +1002,7 @@ a.footer-logo {
 }
 
 .project-card {
-    background-color: #2d2d2d;
+    background-color: rgb(45, 45, 45);
 }
 
 .project-header p {
