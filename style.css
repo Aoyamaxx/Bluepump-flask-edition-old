@@ -496,12 +496,14 @@ a.footer-logo {
     font-size: 10vw;
     margin-bottom: 20px;
 	padding-top: 35vh;
+	padding-right: 5vh;
   	}
 
   .title-landing p {
     font-size: 5vw;
     margin-bottom: 20px;
 	margin-top: 3vh;
+	padding-right: 5vh;
   	}
 
   .video-background {
