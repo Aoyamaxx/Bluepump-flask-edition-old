@@ -1196,3 +1196,55 @@ a.footer-logo {
 		max-width: 100%;
 	}
 }
+
+/* About Us */
+
+.aboutus {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.intro {
+    text-align: center;
+    padding: 2rem 0;
+	padding-top: 5vh;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+	padding-bottom: 5vh;
+}
+
+.section img {
+    width: 45%;
+    height: auto;
+}
+
+.section .text {
+    width: 45%;
+}
+
+.section .text h2 {
+    margin-bottom: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section img {
+        width: 100%;
+    }
+
+    .section .text {
+        text-align: center;
+        padding: 2rem 0;
+    }
+}
