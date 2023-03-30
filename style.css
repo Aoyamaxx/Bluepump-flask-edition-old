@@ -1245,7 +1245,16 @@ a.footer-logo {
     }
 
     .section .text {
-        text-align: center;
+        text-align: left;
         padding: 2rem 0;
+		width: 90%;
+    }
+
+	#origin .text {
+        order: 0;
+    }
+
+    #origin img {
+        order: 1;
     }
 }
