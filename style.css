@@ -726,7 +726,7 @@ a.footer-logo {
 	}
 }
 
-@media (min-width: 1400px) and (max-width: 2000px) {  /* Only for presentation */
+@media (min-width: 1400px) and (max-width: 2200px) {  /* Only for presentation */
 	.bluepump-gallery {
 		display: flex;
 		justify-content: center;
@@ -783,7 +783,7 @@ a.footer-logo {
 		margin: auto;
 		border: 1px solid #ffffff;
 		height: 40vh;
-		width: 50vh;
+		width: 45vh;
 		margin-left: 4%;
 		margin-top: 3vh;
 		float: left;
@@ -799,7 +799,6 @@ a.footer-logo {
 		height: 100%;
 	}
 }
-
 
 /* Our projects homepage */ /* Our mission homepage */
 .container-project {
