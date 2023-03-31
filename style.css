@@ -1132,23 +1132,22 @@ a.footer-logo {
 
 /* Siaya page */
 
-.project-page{
+.project-page {
     width: 100%;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-	padding-bottom: 50px;
+    padding-bottom: 2rem;
 }
 
 .project-page-header-container {
-	max-height: 40vh;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .project-page-header {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     text-align: left;
     color: rgb(0, 0, 0);
@@ -1156,7 +1155,7 @@ a.footer-logo {
     display: flex;
     flex-direction: column;
     padding-left: 10%;
-	padding-bottom: 5%;
+    padding-bottom: 5%;
 }
 
 .project-page-header p {
