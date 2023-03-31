@@ -672,39 +672,6 @@ a.footer-logo {
 	height: 100%;
 }
 
-@media (max-width: 2047px) {
-	.gallery {
-		margin: auto;
-		border: 1px solid #ffffff;
-		float: none;
-		height: 30vh;
-		width: 40vh;
-		margin-top: 3vh;
-	}
-
-	.description-image {
-		color: #ffffff;
-		padding: 20px;
-		text-align: center;
-		margin-top: -2vh;
-	}
-
-	.gallery-title {
-		color: #000000;
-		font-size: 28px;
-		font-weight: bold;
-		margin-bottom: 3vh;
-		margin-top: -6vh;
-	}
-
-	.gallery-introduction {
-		font-size: 18px;
-		width: 80%;
-		text-align: left;
-		margin: auto;
-	}
-}
-
 @media (min-width: 1920) and (max-width: 1920px) {
     .gallery {
         margin-left: 2.2%;
@@ -756,6 +723,80 @@ a.footer-logo {
 		font-size: 28px;
 		font-weight: bold;
 		margin-bottom: 3vh;
+	}
+}
+
+@media (min-width: 1400px) and (max-width: 2000px) {  /* Only for presentation */
+	.bluepump-gallery {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		background: rgb(255, 255, 255);
+		padding-top: 12vh;
+		padding-bottom: 6vh;
+	}
+	  
+	.gallery-title {
+		color: #000000;
+		font-size: 35px;
+		font-weight: bold;
+		margin-bottom: 3vh;
+		margin-top: -6vh;
+	}
+	
+	.gallery-info {
+		margin-top: 5vh;
+	}
+	
+	.gallery-introduction {
+		color: #000000;
+		font-size: 22px;
+		margin: auto;
+	}
+	  
+	.learn-more-btn {
+		display: inline-block;
+		background-color: #007caf;
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+		padding: 10px 20px;
+		border-radius: 50px;
+		text-decoration: none !important;
+		margin-top: 3vh;
+	}
+	  
+	.learn-more-btn:hover {
+		transform: scale(1.2);
+		transition: transform 0.2s ease-in-out;
+		color: #ffffff;
+		transition: color 0.3s ease-in-out;
+	}
+	
+	.image-wrapper {
+		position: relative;
+		height: 100%;
+	}
+	
+	.gallery {
+		margin: auto;
+		border: 1px solid #ffffff;
+		height: 40vh;
+		width: 50vh;
+		margin-left: 4%;
+		margin-top: 3vh;
+		float: left;
+		overflow: hidden
+	}
+	  
+	.gallery:hover {
+		border: 1px solid #ffffff;
+	}
+	
+	.gallery img {
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -926,33 +967,35 @@ a.footer-logo {
     }
 }
 
+
 @media (max-width: 1800px) or (max-height: 927px){
-    .container-project,
+    /*
+	.container-project,
     .container-mission {
         flex-direction: column;
     }
+	*/
 
     .left-project,
     .right-project,
     .left-mission,
     .right-mission {
         width: 100%;
-        height: auto; /* Set height to auto for mobile view */
+        height: auto;
     }
 
-    .container-project .right-project,
     .container-mission .left-mission {
-        order: +1;
+        order: -1;
     }
 
     .title-project,
     .title-mission {
         padding: 20px;
-        position: static; /* Set the position to static for mobile view */
-        transform: none; /* Remove the transform for mobile view */
-        top: auto; /* Remove the top position for mobile view */
-        left: auto; /* Remove the left position for mobile view */
-        max-width: 95%; /* Set max-width to 95% for mobile view */
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        max-width: 95%;
     }
 
     .title-project h1,
@@ -973,9 +1016,10 @@ a.footer-logo {
     }
 
     .right-project {
-        margin-top: 0; /* Reset margin-top for mobile view */
+        margin-top: 0;
     }
-}
+} 
+
 
 /* Project page */
 
