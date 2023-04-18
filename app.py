@@ -1,4 +1,4 @@
-from flask import Flask, request, session, render_template, redirect
+from flask import Flask, request, session, render_template, redirect, send_from_directory
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
@@ -114,6 +114,14 @@ def donate():
 @app.route('/siaya')
 def siaya():
     return render_template('siaya.html')
+
+@app.route('/header')
+def header():
+    return render_template('header.html')
+
+@app.route('/footer')
+def footer():
+    return render_template('footer.html')
 
 @app.route('/track_button_click/<string:button_name>')
 def track_button_click(button_name):

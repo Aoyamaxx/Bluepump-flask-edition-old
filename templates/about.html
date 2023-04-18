@@ -9,9 +9,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 		
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
 	</head>
 	<body>
@@ -35,10 +35,10 @@
 
 					<p>In 2020, Paul Van Beers tragically passed away, at the age of 70, due to cancer-related illnesses. Since 2020, Geraldo Vallen, Founder of Jointhepipe, has acquired the Fairwater Foundation and has continued to distribute Bluepumps in Sub-Saharan Africa.</p>
 				</div>
-				<img src="images/paul.jpg" alt="Paul" class="paul-image">
+				<img src="{{ url_for('static', filename='images/paul.jpg') }}" alt="Paul" class="paul-image">
 			</div>
 			<div class="section" id="origin">
-				<img src="images/picf.jpg" alt="Bluepump">
+				<img src="{{ url_for('static', filename='images/picf.jpg') }}" alt="Bluepump">
 				<div class="text">
 					<h2>The Origin Of The Bluepump</h2>
 					<p>Initially, the pilot handpump model was named ‘Afripump,’ but confusion with the Village Level Operation Maintenance (VLOM) ‘Afridev’ handpump led users to address Paul Van Beers’ handpump as ‘Bluepump’ due to the handpump’s color. With this intervention, Paul renamed the handpump to Fairwater ‘Bluepump.’</p>
@@ -57,12 +57,12 @@
 
 					<p>Before founding Jointhepipe, Geraldo had a resounding success at CZAR, which earned him the Palme d’Or award, among other awards for worldwide production. After CZAR, Geraldo focused on the planet’s well-being and long-term sustainability. Geraldo’s willingness to publicly shame Non-Govermental Organizations (NGOs) for their short-sightedness earned him the label ‘the enfant terrible of the charity world.’</p>
 				</div>
-				<img src="images/geraldo.jpg" alt="Geraldo">
+				<img src="{{ url_for('static', filename='images/geraldo.jpg') }}" alt="Geraldo">
 			</div>
 		</div>
 		<div class="separator"></div>
 		<div id="footer"></div>
-		<script src="loadHeaderFooter.js"></script>
-		<script src="script.js"></script>
+		<script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script> 
 	</body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Our Projets</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		<meta charset="UTF-8">
@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
 	</head>
 	<body>
@@ -26,7 +26,7 @@
                 <div class="project-column">
 					<div class="project-column-inner">
                     	<div class="project-card">
-                        <a href="siaya.html">
+                        <a href="{{ url_for('siaya') }}">
                         <div id='project-img1'></div>
                         <h2>Siaya - Kenya</h2>
                         <p>In collaboration with the Osiligi Foundation, a total of 20 Bluepumps have been installed in the Siaya region of Kenya and continue to supply water to the local community.</p>
@@ -45,7 +45,7 @@
         </div>
 		<div class="separator"></div>
 		<div id="footer"></div>
-		<script src="loadHeaderFooter.js"></script>
-		<script src="script.js"></script>
+		<script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script> 
 	</body>
 </html>

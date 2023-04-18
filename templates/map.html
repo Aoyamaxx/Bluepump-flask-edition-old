@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Map the Pumps</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
         <style>
             body {
@@ -390,6 +390,6 @@
                     });
         </script>
         <div id="footer"></div>
-        <script src="loadHeaderFooter.js"></script>
+        <script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
     </body>
 </html>
