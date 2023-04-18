@@ -95,6 +95,10 @@ def index():
         db.session.commit()
     return render_template('index.html')
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -110,6 +114,10 @@ def projects():
 @app.route('/donate')
 def donate():
     return render_template('donate.html')
+
+@app.route('/siaya')
+def donate():
+    return render_template('siaya.html')
 
 @app.route('/track_button_click/<string:button_name>')
 def track_button_click(button_name):

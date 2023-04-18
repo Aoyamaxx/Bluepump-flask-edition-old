@@ -2,8 +2,8 @@
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="navbar-container">
       <div class="logo-button-container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" alt="image" class="logo">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="image" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -13,12 +13,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="menu-items navbar-nav">
             <div class="menu-items navbar-nav">
-              <a href="index.html" class="menu-item nav-link">Home</a>
-              <a href="map.html" class="menu-item nav-link">Map</a>
-              <a href="projects.html" class="menu-item nav-link">Projects</a>
-              <a href="about.html" class="menu-item nav-link">About Us</a>
+              <a href="{{ url_for('index') }}" class="menu-item nav-link">Home</a>
+              <a href="{{ url_for('map') }}" class="menu-item nav-link">Map</a>
+              <a href="{{ url_for('projects') }}" class="menu-item nav-link">Projects</a>
+              <a href="{{ url_for('about') }}" class="menu-item nav-link">About Us</a>
               <div class="donate-wrapper">
-                <a href="donate.html" class="menu-item nav-link donate">Donate</a>
+                <a href="{{ url_for('donate') }}" class="menu-item nav-link donate">Donate</a>
               </div>
           </div>
         </div>

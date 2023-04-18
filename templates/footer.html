@@ -1,15 +1,15 @@
 <footer>
     <div class="footer-top">
         <div class="footer-section">
-            <a href="index.html"><img src="images/logo.png" class="footer-logo" alt="logo"></a>
+            <a href="{{ url_for('index') }}"><img src="images/logo.png" class="footer-logo" alt="logo"></a>
             <div class="connect-social">
                 <h3>Connect with us on social media</h3>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/Jointhepipe.org"><img src="images/facebook.png" alt="facebook" width="34" height="34"v></a>
-                    <a href="https://twitter.com/jointhepipe"><img src="images/twitter.png" alt="twitter" width="34" height="34"></a>
-                    <a href="https://www.instagram.com/jointhepipe_eu/"><img src="images/instagram.png" alt="instagram" width="34" height="34"></a>
-                    <a href="https://www.linkedin.com/company/jointhepipe.org/"><img src="images/linkedin.png" alt="linkedin" width="34" height="34"></a>
-                    <a href="https://www.youtube.com/@JoinThePipeNow"><img src="images/youtube.png" alt="youtube" width="43" height="43"></a>
+                    <a href="https://www.facebook.com/Jointhepipe.org"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="facebook" width="34" height="34"v></a>
+                    <a href="https://twitter.com/jointhepipe"><img src="{{ url_for('static', filename='images/twitter.png') }}" width="34" height="34"></a>
+                    <a href="https://www.instagram.com/jointhepipe_eu/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" width="34" height="34"></a>
+                    <a href="https://www.linkedin.com/company/jointhepipe.org/"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="linkedin" width="34" height="34"></a>
+                    <a href="https://www.youtube.com/@JoinThePipeNow"><img src="{{ url_for('static', filename='images/youtube.png') }}" alt="youtube" width="43" height="43"></a>
                 </div>
             </div>
         </div>
@@ -18,17 +18,17 @@
         </div>
         <div class="footer-section-a">
             <h3 class="footer-menu-title">Home</h3>
-            <p><a href="map.html" class="footer-item">BluePump Map</a></p>
+            <p><a href="{{ url_for('map') }}" class="footer-item">BluePump Map</a></p>
             <p><a href="#" class="footer-item">BluePump Gallery</a></p>
             <p><a href="#" class="footer-item">Our Partners</a></p>
-            <p><a href="projects.html" class="footer-item">Our Projects</a></p>
+            <p><a href="{{ url_for('projects') }}" class="footer-item">Our Projects</a></p>
             <p><a href="#" class="footer-item">Our Mission</a></p>
         </div>
         <div class="footer-section-b">
             <h3 class="footer-menu-title">About Us</h3>
-            <p><a href="about.html" class="footer-item">BluePump</a></p>
-            <p><a href="about.html" class="footer-item">Paul Van Beers</a></p>
-            <p><a href="about.html" class="footer-item">Geraldo Vallen</a></p>
+            <p><a href="{{ url_for('about') }}" class="footer-item">BluePump</a></p>
+            <p><a href="{{ url_for('about') }}" class="footer-item">Paul Van Beers</a></p>
+            <p><a href="{{ url_for('about') }}" class="footer-item">Geraldo Vallen</a></p>
         </div>
         <div class="footer-section-c">
             <h3 class="footer-menu-title">Related Link</h3>
