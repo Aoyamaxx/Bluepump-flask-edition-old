@@ -12,9 +12,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
+		<script>let serverVisitorId = '{{ visitor_id }}';</script>
+
+    	<script>
+            var serverVisitorId = "{{ visitor_id }}";
+        </script>
+
 	</head>
 	<body>
 		<div id="header"></div>
+		<div id="load-donate-popup" style="display: none;"></div>
 		<div class="projects">
 			<div class="project-header-container">
             	<div class="project-header">
@@ -27,7 +34,7 @@
 					<div class="project-column-inner">
                     	<div class="project-card">
                         <a href="{{ url_for('siaya') }}">
-                        <div id='project-img1'></div>
+                        <div id='project-img1' style="background-image: url({{ url_for('static', filename='jointhepic/Siaya.jpg') }});"></div>
                         <h2>Siaya - Kenya</h2>
                         <p>In collaboration with the Osiligi Foundation, a total of 20 Bluepumps have been installed in the Siaya region of Kenya and continue to supply water to the local community.</p>
                         </a>
@@ -36,7 +43,7 @@
                 </div>
                 <div class="project-column">
                     <div class="project-card">
-                        <div id='project-img2'></div>
+                        <div id='project-img2' style="background-image: url({{ url_for('static', filename='jointhepic/Cameroon.jpg') }});"></div>
                         <h2>South Sudan</h2>
                         <p>In collaboration with various organizations including Oxyfarm, UNICEF and ICRC, a total of approximately 90 Bluepumps have been installed in South Sudan.</p>
                     </div>
@@ -46,6 +53,7 @@
 		<div class="separator"></div>
 		<div id="footer"></div>
 		<script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+		<div id="load-privacy-banner"></div>
 	</body>
 </html>

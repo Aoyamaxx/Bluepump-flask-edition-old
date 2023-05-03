@@ -10,12 +10,20 @@
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-		
+
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+		<script>let serverVisitorId = '{{ visitor_id }}';</script>
+
+    	<script>
+            var serverVisitorId = "{{ visitor_id }}";
+        </script>
 
 	</head>
 	<body>
 		<div id="header"></div>
+
+		<div id="load-donate-popup" style="display: none;"></div>
 
 		<div class="aboutus">
 			<h1 class="intro">Designed for long-lasting and reliable operation, Bluepumps can be encountered in over a dozen Sub-Saharan African countries such as Mali, Kenya, Burkina Faso, Tanzania, and Gambia.</h1>
@@ -63,6 +71,7 @@
 		<div class="separator"></div>
 		<div id="footer"></div>
 		<script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+		<div id="load-privacy-banner"></div>
 	</body>
 </html>

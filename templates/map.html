@@ -15,6 +15,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
+        <script>let serverVisitorId = '{{ visitor_id }}';</script>
+
+    	<script>
+            var serverVisitorId = "{{ visitor_id }}";
+        </script>
+
         <style>
             body {
 				margin: 0;
@@ -23,14 +29,14 @@
 				grid-template-rows: auto 1fr; /* Set the body grid layout to have two rows, one for the header and one for the content */
 				min-height: 100vh;
 			}
-    
+
             #header {
 				position: relative;
 				height: auto; /* Change height to auto */
 				background-color: #ffffff;
 				width: 100%;
 			}
-    
+
 			#content {
 				flex: 1; /* This will make the content div take up the remaining vertical space */
 			}
@@ -47,7 +53,7 @@
                 bottom: 0;
                 left: 0;
               }
-    
+
             .mapboxgl-popup {
                 max-width: 400px;
                 font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -58,7 +64,7 @@
 				height: 100%;
 				width: 100%;
 			}
-			
+
             html, body {
                 height: 100%;
                 margin: 0;
@@ -68,6 +74,7 @@
     </head>
     <body>
         <div id="header"></div>
+        <div id="load-donate-popup" style="display: none;"></div>
 		<div id="content">
         	<div class="map-container">
             	<div id="map"></div>
@@ -82,7 +89,7 @@
                         center: [34.239,-0.010],
                         zoom: 10
                     });
-    
+
                     map.on('load', () => {
                         map.addSource('places', {
                             // This GeoJSON contains features that include an "icon"
@@ -357,32 +364,32 @@
                                 ],
                             }
                         });
-    
+
                         // When a click event occurs on a feature in the places layer, open a popup at the
                         // location of the feature, with description HTML from its properties.
                         map.on('click', 'places', (e) => {
                             // Copy coordinates array.
                             const coordinates = e.features[0].geometry.coordinates.slice();
                             const description = e.features[0].properties.description;
-    
+
                             // Ensure that if the map is zoomed out such that multiple
                             // copies of the feature are visible, the popup appears
                             // over the copy being pointed to.
                             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
                             }
-    
+
                             new mapboxgl.Popup()
                                 .setLngLat(coordinates)
                                 .setHTML(description)
                                 .addTo(map);
                         });
-    
+
                         // Change the cursor to a pointer when the mouse is over the places layer.
                         map.on('mouseenter', 'places', () => {
                             map.getCanvas().style.cursor = 'pointer';
                         });
-    
+
                         // Change it back to a pointer when it leaves.
                         map.on('mouseleave', 'places', () => {
                             map.getCanvas().style.cursor = '';
@@ -390,6 +397,8 @@
                     });
         </script>
         <div id="footer"></div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
         <script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
+        <div id="load-privacy-banner"></div>
     </body>
 </html>
