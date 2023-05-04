@@ -21,10 +21,6 @@
 
     	<script>let serverVisitorId = '{{ visitor_id }}';</script>
 
-    	<script>
-            var serverVisitorId = "{{ visitor_id }}";
-        </script>
-
 	</head>
 	<body>
 		<div id="header"></div>
@@ -41,7 +37,7 @@
 				</div>
 			  </div>
 			  <video class="video-background" loop muted autoplay>
-				<source src="{{ url_for('static', filename='images/pumpvideo.m4v') }}" type="video/mp4">
+				<source src="{{ url_for('static', filename='images/pumpvideo.mp4') }}" type="video/mp4">
 				Your browser does not support the video tag.
 			  </video>
 			  <img class="image-background" src="{{ url_for('static', filename='images/picb.jpg') }}" alt="Background image">
@@ -63,82 +59,46 @@
 
 		<section id="blupump-gallery">
 			<div class="container">
-				<h2 class="text-center mb-5">Blupump Gallery</h2>
+				<h2 class="text-center mb-5" style="font-weight: bold; font-size: 36px;">Blupump Gallery</h2>
+				<div class="gallery-description">
+                    <p>Welcome to the Bluepump Gallery, a captivating collection of images showcasing our life-changing Bluepump installations across various African countries. As you explore the gallery, you'll discover the transformative impact of Bluepumps on local communities, providing them with reliable and clean water sources.</p>
+                </div>
 				<div class="row">
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<img src="{{ url_for('static', filename='images/pica.jpg') }}" class="card-img" alt="Blupump Image 1">
+							<img src="{{ url_for('static', filename='images/mali_flag.jpg') }}" class="card-img" alt="Blupump Image 1">
 							<div class="card-body">
-								<h5 class="card-title">Country 1</h5>
-								<p class="card-text">This is a description of the first Blupump example.</p>
+								<h5 class="card-title">Mali</h5>
+								<p class="card-text">Mali Blupump gallery description.</p>
 							</div>
 							<div class="card-footer text-center">
-								<a href="#" class="btn btn-primary">Learn More</a>
+								<a href="{{ url_for('gallery_mali') }}" class="btn btn-primary">Learn More</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<img src="{{ url_for('static', filename='images/pice.jpg') }}" class="card-img" alt="Blupump Image 2">
+							<img src="{{ url_for('static', filename='images/kenya_flag.webp') }}" class="card-img" alt="Blupump Image 2">
 							<div class="card-body">
-								<h5 class="card-title">Country 2</h5>
-								<p class="card-text">This is a description exaple.</p>
+								<h5 class="card-title">Kenya</h5>
+								<p class="card-text">Kenya Blupump gallery description.</p>
 							</div>
 							<div class="card-footer text-center">
-								<a href="#" class="btn btn-primary">Learn More</a>
+								<a href="{{ url_for('gallery_kenya') }}" class="btn btn-primary">Learn More</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<img src="{{ url_for('static', filename='images/picc.jpg') }}" class="card-img" alt="Blupump Image 3">
+							<img src="{{ url_for('static', filename='images/burkina_flag.png') }}" class="card-img" alt="Blupump Image 3">
 							<div class="card-body">
-								<h5 class="card-title">Country 3</h5>
-								<p class="card-text">This is a description exaple.</p>
+								<h5 class="card-title">Burkina Faso</h5>
+								<p class="card-text">Burkina Faso Blupump gallery description.</p>
 							</div>
 							<div class="card-footer text-center">
-								<a href="#" class="btn btn-primary">Learn More</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<img src="{{ url_for('static', filename='images/pica.jpg') }}" class="card-img" alt="Blupump Image 3">
-							<div class="card-body">
-								<h5 class="card-title">Country 4</h5>
-								<p class="card-text">This is a description exaple.</p>
-							</div>
-							<div class="card-footer text-center">
-								<a href="#" class="btn btn-primary">Learn More</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<img src="{{ url_for('static', filename='images/pice.jpg') }}" class="card-img" alt="Blupump Image 3">
-							<div class="card-body">
-								<h5 class="card-title">Country 5</h5>
-								<p class="card-text">This is a description exaple.</p>
-							</div>
-							<div class="card-footer text-center">
-								<a href="#" class="btn btn-primary">Learn More</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<img src="{{ url_for('static', filename='images/picc.jpg') }}" class="card-img" alt="Blupump Image 3">
-							<div class="card-body">
-								<h5 class="card-title">Country 6</h5>
-								<p class="card-text">This is a description exaple.</p>
-							</div>
-							<div class="card-footer text-center">
-								<a href="#" class="btn btn-primary">Learn More</a>
+								<a href="{{ url_for('gallery_burkina') }}" class="btn btn-primary">Learn More</a>
 							</div>
 						</div>
 					</div>

@@ -31,6 +31,17 @@
     });
   }
 
+  function trackDonateClick(visitorId, buttonType) {
+  $.ajax({
+    url: '/track_donate_click',
+    method: 'POST',
+    data: {
+      visitor_id: visitorId,
+      button_type: buttonType
+    }
+  });
+}
+
   function initializeEvents(visitorId) {
     let startTimeGlobal = new Date();
 
@@ -67,14 +78,12 @@
       trackUserAction(visitorId, 'clicked_learn_more');
     });
 
-    // Add event listener to Donate buttons
-    $('body').on('click', '.donate', function () {
-      $.get(`/track_button_click/donate_button?visitor_id=${visitorId}`);
-    });
-
-    // Add event listener to Map button
-    $('body').on('click', '.menu-item[href="map.html"]', function () {
-      $.get(`/track_button_click/map_button?visitor_id=${visitorId}`);
+    $(document).on('click', '.donate, .donate-landing', function () {
+      event.preventDefault();
+      const buttonType = $(this).hasClass('donate-landing') ? 'index' : 'header';
+      const visitorId = sessionStorage.getItem('visitor_id');
+      trackDonateClick(visitorId, buttonType);
+      window.location.href = $(this).attr('href');
     });
 
     $('#accept-privacy, #reject-privacy').on('click', function () {

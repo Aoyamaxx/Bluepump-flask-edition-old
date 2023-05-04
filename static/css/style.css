@@ -627,6 +627,14 @@ a.footer-logo {
 	text-align: center;
 }
 
+.gallery-description {
+    text-align: left;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+    max-width: 1500px;
+    font-size: 18px;
+}
+
 /* Our projects homepage */ /* Our mission homepage */
 .container-project {
     display: flex;
@@ -793,6 +801,20 @@ a.footer-logo {
 }
 
 @media (max-width: 1500px), (max-height: 827px){
+	.title-project h1,
+    .title-mission h1 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .title-project p,
+    .title-mission p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1100px), (max-height: 700px){
 	.container-project,
     .container-mission {
         flex-direction: column;
@@ -1155,6 +1177,10 @@ a.footer-logo {
     border-radius: 5px;
 }
 
+.popup-content h2 {
+    padding-bottom: 5px;
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -1188,11 +1214,16 @@ a.footer-logo {
     font-size: 14px;
     color: #999;
     cursor: pointer;
+    margin-top: -20px;
 }
 
 .not-now:hover {
     text-decoration: underline;
     color: #666;
+}
+
+.center-align {
+    text-align: center;
 }
 
 /* Privacy policy banner */
@@ -1203,7 +1234,7 @@ a.footer-logo {
   left: 0;
   width: 100%;
   background-color: #f1f1f1;
-  padding: 10px 20px;
+  padding: 2vh 5vh;
   box-sizing: border-box;
   z-index: 9999;
 }
@@ -1234,7 +1265,7 @@ a.footer-logo {
   background-color: #007bff;
   border: none;
   color: white;
-  padding: 5px 10px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -1245,4 +1276,11 @@ a.footer-logo {
 
 #reject-privacy {
   background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .privacy-banner-content p {
+      margin: 0;
+      margin-bottom: 2vh;
+}
 }
