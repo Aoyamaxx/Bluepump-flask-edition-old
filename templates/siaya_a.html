@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Map the Pumps</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+        <script>let serverVisitorId = '{{ visitor_id }}';</script>
+
+    </head>
+    <body class="web_background">
+        <div id="header-a"></div>
+        <div class="project-page">
+            <div class="project-page-header-container">
+            	<div class="project-page-header">
+                <h1>Providing clean drinking water to Siaya - Kenya</h1>
+                <p>The Osiligi Foundation is a UK-based charity providing handpump rehabilitation in Kenya's Maasai region. 'Osiligi' is the Maasai word for 'Hope.' The Foundation is comprised of volunteers to reduce poverty in Kenya.</p>
+
+                <p>In 2019, the Osiligi Foundation installed Bluepumps in numerous regions across Kenya, including 20 Bluepumps in the Siaya region. With local cooperation, the Osiligi Foundation could safely store and arrange security for the Bluepumps.</p>
+
+                <p>The Osiligi Foundation prioritizes establishing virtuous relationships with communities, local authorities, and Technorelief, the authorized Bluepump distributor in Kenya. The Foundation established a Memorandum of Understandings (MOUs) with local communities and leaders, outlining each party's responsibilities. </p>
+
+                <p>In 2019, Technorelief provided a 'Training Phrase' to communities in which Bluepumps were installed, and a two-year maintenance agreement was established.</p>
+
+            	</div>
+			</div>
+        </div>
+		<div class="separator"></div>
+
+        <div id="footer-a"></div>
+        <script src="{{ url_for('static', filename='js/script_a.js') }}"></script>
+		<div id="load-privacy-banner-a"></div>
+    </body>
+</html>

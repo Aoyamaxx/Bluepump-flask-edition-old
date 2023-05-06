@@ -2,7 +2,7 @@
 
   function logSiteVisit(visitorId) {
     $.ajax({
-      url: '/log_site_visit',
+      url: '/log_site_visit_b',
       method: 'POST',
       data: {
         visitor_id: visitorId,
@@ -12,7 +12,7 @@
 
   function logSiteExit(visitor_id) {
   $.ajax({
-    url: '/track_exit',
+    url: '/track_exit_b',
     method: 'POST',
     data: {
       visitor_id: visitor_id,
@@ -23,7 +23,7 @@
 
   function fetchVisitorId(callback) {
     $.ajax({
-      url: '/get_visitor_id',
+      url: '/get_visitor_id_b',
       method: 'GET',
       success: function (response) {
         callback(response.visitor_id);
@@ -33,7 +33,7 @@
 
   function trackDonateClick(visitorId, buttonType) {
   $.ajax({
-    url: '/track_donate_click',
+    url: '/track_donate_click_b',
     method: 'POST',
     data: {
       visitor_id: visitorId,
@@ -62,8 +62,6 @@
     $('body').on('click', '#donate-button', function () {
       hideDonatePopup();
       trackUserAction(visitorId, 'clicked_donate');
-      // Redirect the user to the donate page
-      window.location.href = '/donate';
     });
 
     $('body').on('click', '#donate-popup .not-now', function () {
@@ -78,9 +76,9 @@
       trackUserAction(visitorId, 'clicked_learn_more');
     });
 
-    $(document).on('click', '.donate, .donate-landing', function () {
+    $(document).on('click', '.donate, .donate-landing', function (event) {
       event.preventDefault();
-      const buttonType = $(this).hasClass('donate-landing') ? 'index' : 'header';
+      const buttonType = $(this).hasClass('donate-landing') ? 'index_b' : 'header_b';
       const visitorId = sessionStorage.getItem('visitor_id');
       trackDonateClick(visitorId, buttonType);
       window.location.href = $(this).attr('href');
@@ -91,17 +89,9 @@
       sessionStorage.setItem('privacy_decision', decision);
       $('#privacy-banner').hide();
 
-    if (typeof serverVisitorId !== 'undefined' && serverVisitorId !== '') {
-      initializeEvents(serverVisitorId);
-    } else {
-    fetchVisitorId(function (visitorId) {
-      initializeEvents(visitorId);
-    });
-  }
-
       // Record user decision in your database
       $.ajax({
-        url: '/log_privacy_decision',
+        url: '/log_privacy_decision_b',
         method: 'POST',
         data: {
           visitor_id: serverVisitorId,
@@ -111,17 +101,9 @@
     });
   }
 
-  if (typeof serverVisitorId !== 'undefined' && serverVisitorId !== '') {
-    initializeEvents(serverVisitorId);
-  } else {
-    fetchVisitorId(function (visitorId) {
-      initializeEvents(visitorId);
-    });
-  }
-
   function trackUserAction(visitorId, action) {
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/track_user_action', true);
+    xhr.open('POST', '/track_user_action_b', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send(`visitor_id=${visitorId}&action=${action}`);
   }
@@ -154,28 +136,37 @@
   }
 
   $(document).ready(function () {
-    $("#header").load("header.html");
-    $("#footer").load("footer.html");
+    $("#header-b").load("/header_b");
+    $("#footer-b").load("/footer_b");
 
-    $("#load-privacy-banner").load("/privacy_banner", function () {
-    // After the content is loaded, append it to the body
-    $('body').append($('#load-privacy-banner').html());
-    $('#load-privacy-banner').remove();
-
-    // Only show the privacy banner if the user hasn't made a decision yet
-    if (!sessionStorage.getItem('privacy_decision')) {
-      $('#privacy-banner').show();
+    if (typeof serverVisitorId !== 'undefined' && serverVisitorId !== '') {
+      initializeEvents(serverVisitorId);
+    } else {
+      fetchVisitorId(function (visitorId) {
+        initializeEvents(visitorId);
+      });
     }
 
+    $("#load-privacy-banner-b").load("/privacy_banner_b", function () {
+      // After the content is loaded, append it to the body
+      $('body').append($('#load-privacy-banner-b').html());
+      $('#load-privacy-banner-b').remove();
+
+      // Only show the privacy banner if the user hasn't made a decision yet
+      if (!sessionStorage.getItem('privacy_decision')) {
+        $('#privacy-banner').show();
+      }
+
     // Handle privacy banner actions
-    $('#accept-privacy, #reject-privacy').on('click', function () {
+    $('body').on('click', '#accept-privacy, #reject-privacy', function () {
       const decision = this.id === 'accept-privacy' ? 'Y' : 'N';
+      const visitorId = sessionStorage.getItem('visitor_id');
       sessionStorage.setItem('privacy_decision', decision);
       $('#privacy-banner').hide();
 
-      // Record user decision in your database
+     // Record user decision in your database
       $.ajax({
-        url: '/log_privacy_decision',
+        url: '/log_privacy_decision_b',
         method: 'POST',
         data: {
           visitor_id: serverVisitorId,
@@ -186,15 +177,14 @@
 
     $('#privacy-policy-link').on('click', function () {
       sessionStorage.setItem('privacy_decision', 'P');
-      $('#privacy-banner').hide();
+      $('#privacy-banner-b').hide();
     });
-  });
 
     // Load the donate_popup content
-    $('#load-donate-popup').load('/donate_popup', function () {
+    $('#load-donate-popup-b').load('/donate_popup_b', function () {
       // After the content is loaded, append it to the body
-      $('body').append($('#load-donate-popup').html());
-      $('#load-donate-popup').remove();
+      $('body').append($('#load-donate-popup-b').html());
+      $('#load-donate-popup-b').remove();
 
       // Add the event listeners for closing the popup and clicking the donate button
       $('.close, .not-now').on('click', function () {
@@ -204,5 +194,6 @@
 
     // Check if the user is on the donate page or clicked the donate button within 15 seconds
     const checkUserActionInterval = setInterval(checkUserAction, 1000);
+  });
   });
 })();

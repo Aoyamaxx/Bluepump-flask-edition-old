@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gallery Burkina Faso</title>
+        <title>Gallery Kenya</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <meta charset="UTF-8">
@@ -41,22 +41,22 @@
 
     </head>
     <body>
-        <div id="header"></div>
-        <div id="load-donate-popup" style="display: none;"></div>
+        <div id="header-b"></div>
+        <div id="load-donate-popup-b" style="display: none;"></div>
 
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center my-4" style="padding: 3vh;">Burkina Faso BluePump Gallery</h1>
+                    <h1 class="text-center my-4" style="padding: 3vh;">Kenya BluePump Gallery</h1>
                 </div>
             </div>
             <div class="row">
                 {% for image in country_images %}
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="{{ url_for('static', filename='images/' + image.filename) }}" data-lightbox="gallery" data-title="Burkina Faso BluePump Gallery">
+                            <a href="{{ url_for('static', filename='images/' + image.filename) }}" data-lightbox="gallery" data-title="Kenya BluePump Gallery">
                                 <div class="card-img-container">
-                                    <img src="{{ url_for('static', filename='images/' + image.filename) }}" class="card-img-top" alt="Burkina Faso BluePump Image">
+                                    <img src="{{ url_for('static', filename='images/' + image.filename) }}" class="card-img-top" alt="Kenya BluePump Image">
                                 </div>
                             </a>
                         </div>
@@ -67,9 +67,8 @@
 
         <div class="separator"></div>
 
-        <div id="footer"></div>
-        <script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-        <div id="load-privacy-banner"></div>
+        <div id="footer-b"></div>
+		<script src="{{ url_for('static', filename='js/script_b.js') }}"></script>
+		<div id="load-privacy-banner-b"></div>
     </body>
 </html>

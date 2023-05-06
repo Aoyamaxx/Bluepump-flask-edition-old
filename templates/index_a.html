@@ -10,33 +10,28 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     	<script>let serverVisitorId = '{{ visitor_id }}';</script>
 
 	</head>
 	<body>
-		<div id="header"></div>
-
-        <div id="load-donate-popup" style="display: none;"></div>
+		<div id="header-a"></div>
 
 		<div id="content">
 			<div class="container-landing">
 			  <div class="title-landing">
+			    <p>Version A (no Donate popup)<p>
 				<h1>This is <span class="bluepump-title">BluePump.</span></h1>
 				<p>Designed for long-lasting and reliable operation</p>
 				<div class="donate-landing-wrapper">
-					<a href="{{ url_for('donate') }}" class="donate-landing">Donate Now</a>
+					<a id="donate-index-a" href="{{ url_for('donate_a') }}" class="donate-landing">Donate Now</a>
 				</div>
 			  </div>
-			  <video class="video-background" loop muted autoplay>
+			  <video class="video-background" loop muted>
 				<source src="{{ url_for('static', filename='images/pumpvideo.mp4') }}" type="video/mp4">
 				Your browser does not support the video tag.
 			  </video>
@@ -72,7 +67,7 @@
 								<p class="card-text">Mali Blupump gallery description.</p>
 							</div>
 							<div class="card-footer text-center">
-								<a href="{{ url_for('gallery_mali') }}" class="btn btn-primary">Learn More</a>
+								<a href="{{ url_for('gallery_mali_a') }}" class="btn btn-primary">Learn More</a>
 							</div>
 						</div>
 					</div>
@@ -85,7 +80,7 @@
 								<p class="card-text">Kenya Blupump gallery description.</p>
 							</div>
 							<div class="card-footer text-center">
-								<a href="{{ url_for('gallery_kenya') }}" class="btn btn-primary">Learn More</a>
+								<a href="{{ url_for('gallery_kenya_a') }}" class="btn btn-primary">Learn More</a>
 							</div>
 						</div>
 					</div>
@@ -98,7 +93,7 @@
 								<p class="card-text">Burkina Faso Blupump gallery description.</p>
 							</div>
 							<div class="card-footer text-center">
-								<a href="{{ url_for('gallery_burkina') }}" class="btn btn-primary">Learn More</a>
+								<a href="{{ url_for('gallery_burkina_a') }}" class="btn btn-primary">Learn More</a>
 							</div>
 						</div>
 					</div>
@@ -118,7 +113,7 @@
 				<div class="title-project">
 					<h1>Our Projects</h1>
 					<p>Since the start of the BluePump project, with the help of our partners, we now provide over 1.000 communities with sustainable access to safe water; that means more than 500.000 people have every day clean water nearby, for the lowest price in Africa.</p>
-					<a href="{{ url_for('projects') }}" class="learn-more-btn-project-missions">Learn more</a>
+					<a href="{{ url_for('projects_a') }}" class="learn-more-btn-project-missions">Learn more</a>
 				</div>
 			</div>
 		</div>
@@ -127,7 +122,7 @@
 				<div class="title-mission">
 					<h1>Paul Van Beers</h1>
 					<p>Paul Van Beers was the Founder of the Bluepump and Co-Founder of the Fairwater Foundation.</p>
-					<a href="{{ url_for('about') }}" class="learn-more-btn-project-missions">Learn more</a>
+					<a href="{{ url_for('about_a') }}" class="learn-more-btn-project-missions">Learn more</a>
 				</div>
 			</div>
 			<div class="right-mission">
@@ -135,9 +130,8 @@
 			</div>
 		</div>
 		<div class="separator-home"></div>
-		<div id="footer"></div>
-		<script src="{{ url_for('static', filename='js/loadHeaderFooter.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+		<div id="footer-a"></div>
+		<script src="{{ url_for('static', filename='js/script_a.js') }}"></script>
 		<script>
 			function setCardImageHeight() {
 			  const cardImages = document.querySelectorAll('#blupump-gallery .card-img');
@@ -152,7 +146,21 @@
 
 			window.addEventListener('DOMContentLoaded', setCardImageHeight);
 			window.addEventListener('resize', setCardImageHeight);
+
+			function setupVideoAutoplay() {
+              const videoElement = document.querySelector('.video-background');
+              const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+              if (screenWidth > 767.98) {
+                  videoElement.setAttribute('autoplay', '');
+              } else {
+                  videoElement.removeAttribute('autoplay');
+              }
+          }
+
+          window.addEventListener('DOMContentLoaded', setupVideoAutoplay);
+          window.addEventListener('resize', setupVideoAutoplay);
 		</script>
-		<div id="load-privacy-banner"></div>
+		<div id="load-privacy-banner-a"></div>
 	</body>
 </html>
